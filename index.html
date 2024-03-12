@@ -32,15 +32,21 @@
             // Obtener el valor del input y quitar espacios en blanco al principio y al final
             const texto = document.getElementById("elemento").value.trim(); 
 
-            if (texto === "") {
-                // Mostrar mensaje de error
-                document.getElementById("mensajeError").style.display = "block";
-                console.log('Cargue algo por favor')
-            } else {
-                // Mostrar texto en alerta y consola
-                alert(`Texto cargado ${texto}`);
-                console.log(`Texto cargado ${texto}`);
-            }
+            // if (texto === "") {
+            //     // Mostrar mensaje de error
+            //     document.getElementById("mensajeError").style.display = "block";
+            //     console.log('Cargue algo por favor')
+            // } else {
+            //     // Mostrar texto en alerta y consola
+            //     alert(`Texto cargado ${texto}`);
+            //     console.log(`Texto cargado ${texto}`);
+            // }
+
+            // ternario
+            texto === "" 
+                ? (document.getElementById("mensajeError").style.display = "block", console.log('Cargue algo por favor')) 
+                : (alert(`Texto cargado ${texto}`), console.log(`Texto cargado ${texto}`));
+
         }
 
     </script>
