@@ -26,7 +26,8 @@
     <div id="mensajeError" class="mensaje-error">Cargue algo por favor</div>
 
     <script>
-        function verificarTexto() {
+
+        const verificarTexto = () => {
 
             // Obtener el valor del input y quitar espacios en blanco al principio y al final
             const texto = document.getElementById("elemento").value.trim(); 
@@ -41,6 +42,7 @@
                 console.log(`Texto cargado ${texto}`);
             }
         }
+
     </script>
 </body>
 </html>
