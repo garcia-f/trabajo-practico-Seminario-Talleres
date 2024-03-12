@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de texto</title>
+    <style>
+        .mensaje-error {
+            color: red;
+            background-color: yellow;
+            padding: 5px;
+            display: none; /* Inicialmente oculto */
+        }
+    </style>
+</head>
+<body>
+    <h1>Hola</h1>
+
+    <input id="elemento" type="text">
+    <button onclick="verificarTexto()">Verificar</button>
+    <br>
+    <br>
+    <label id="idtexto">el texto</label> 
+    <br>
+    <br>
+    <div id="mensajeError" class="mensaje-error">Cargue algo por favor</div>
+
+    <script>
+        function verificarTexto() {
+
+            // Obtener el valor del input y quitar espacios en blanco al principio y al final
+            const texto = document.getElementById("elemento").value.trim(); 
+
+            if (texto === "") {
+                // Mostrar mensaje de error
+                document.getElementById("mensajeError").style.display = "block";
+                console.log('Cargue algo por favor')
+            } else {
+                // Mostrar texto en alerta y consola
+                alert(`Texto cargado ${texto}`);
+                console.log(`Texto cargado ${texto}`);
+            }
+        }
+    </script>
+</body>
+</html>
